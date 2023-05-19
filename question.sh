@@ -41,6 +41,8 @@
 #
 #  >>> Escriba su codigo a partir de este punto <<<
 #
-sed 's/,/./g' data.csv \
-| sed 's/[a-z]/\U&/g' \
+sed 's/,/./g' data.csv \ |
+sed 's/[a-z]/\U&/g' \ |
+sed 's/;/,/g' \ |
+sed 's/,,/\,\\N,/g' \ |
 
